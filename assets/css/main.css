@@ -23,7 +23,7 @@
     --default-color: #01304d; /* Default color used for the majority of the text content across the entire website */
     --heading-color: #545454; /* Color for headings, subheadings and title throughout the website */
     --accent-color: #ffbb9b; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-    --surface-color: #bfe5ef; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+    --surface-color: #d1eff7; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
     --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
@@ -879,7 +879,7 @@ section,
 
   .hero h2,
   .hero p {
-    max-width: 60%;
+    max-width: 100%;
   }
 }
 
@@ -995,12 +995,13 @@ section,
 }
 
 .hero .featured-item .icon {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .hero .featured-item .icon i {
   color: var(--accent-color);
-  font-size: 36px;
+  font-size: 14px;
+  font-weight: bold;
   transition: ease-in-out 0.3s;
 }
 
@@ -1677,6 +1678,7 @@ section,
   margin-bottom: 40px;
 }
 
+
 .pricing .pricing-item {
   background-color: var(--surface-color);
   box-shadow: 0 3px 20px -2px rgba(0, 0, 0, 0.1);
@@ -2287,6 +2289,7 @@ section,
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 }
 
+
 .contact .info-item i {
   font-size: 20px;
   color: var(--accent-color);
@@ -2299,7 +2302,7 @@ section,
   border-radius: 4px;
   transition: all 0.3s ease-in-out;
   border-radius: 50%;
-  border: 2px dotted color-mix(in srgb, var(--accent-color), transparent 40%);
+  border: 2px dotted color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
 .contact .info-item h3 {
@@ -2574,8 +2577,8 @@ section,
 
 .cookiealert button {
 
-  color: #fff;
-  background: #ff5821;
+  color: #005b97;
+  background: #ffbb9b;
   display: inline-block;
   transition: 0.3s;
 }
