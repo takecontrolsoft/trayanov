@@ -45,7 +45,7 @@
 }
 
 .dark-background {
-    --background-color: #005b97;
+    --background-color: #02416a;
     --default-color: #ffffff;
     --heading-color: #ffffff;
     --surface-color: #565656;
@@ -204,6 +204,7 @@ h6 {
 
 .header .branding {
   padding: 0;
+  border-bottom: 0.5mm solid #99fee6;
 }
 
 .header .logo {
@@ -739,7 +740,7 @@ section,
 .section {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 60px 0;
+  padding: 20px 0;
   scroll-margin-top: 100px;
   overflow: clip;
 }
@@ -748,7 +749,7 @@ section,
 
   section,
   .section {
-    scroll-margin-top: 66px;
+    scroll-margin-top: 26px;
   }
 }
 
@@ -757,13 +758,14 @@ section,
 --------------------------------------------------------------*/
 .section-title {
   text-align: center;
-  padding-bottom: 60px;
+  padding-bottom: 10px;
   position: relative;
 }
 
 .section-title h2 {
   font-size: 32px;
   font-weight: 700;
+  margin-top: 20px;
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
@@ -818,7 +820,7 @@ section,
   height: 100%;
   object-fit: cover;
   z-index: 1;
-  opacity: 50%;
+  opacity: 30%;
 }
 
 .hero .carousel-item {
@@ -856,8 +858,8 @@ section,
 }
 
 .carousel-container img {
-  margin-top: -160px;
-  margin-bottom: 60px;
+  margin-top: -80px;
+  margin-bottom: 10px;
   position: sticky;
   max-width: 200px;
   max-height: 200px;
@@ -870,27 +872,38 @@ section,
   margin-bottom: 30px;
   font-size: 48px;
   font-weight: 700;
+  text-align: center;
+  color: #000;
   animation: fadeInDown 1s both;
   text-shadow: -1px 1px 13px #d6eef098;  
 }
 
 .hero .carousel-item h2 span {
   color: var(--accent-color);
+  text-shadow: 1px 1px 1px #000;  
 }
 
 @media (max-width: 768px) {
   .hero .carousel-item h2 {
     font-size: 30px;
+    text-align: center;
   }
 }
 
 .hero .carousel-item p {
   animation: fadeInDown 1s both 0.2s;
-  color: var(--default-color);
+  color: #000;
   text-shadow: 3px 3px 10px #ffffff;  
   font-size: 30px;
+  text-align: center;
 }
 
+@media (max-width: 768px) {
+  .hero .carousel-item p {
+    font-size: 20px;
+    text-align: center;
+  }
+}
 @media (min-width: 1024px) {
 
   .hero h2,
@@ -976,7 +989,7 @@ section,
 }
 
 .hero .featured {
-  margin-top: -150px;
+  margin-top: -80px;
   padding-top: 30px;
   padding-bottom: 30px;
   position: relative;
@@ -986,8 +999,8 @@ section,
 @media (max-height: 768px),
 (max-width: 1024px) {
   .hero .featured {
-    margin-top: 0;
-  }
+    margin-top: -5;
+  } 
 }
 
 .hero .featured-item {
@@ -1039,9 +1052,9 @@ section,
   margin-bottom: 0;
   transition: ease-in-out 0.3s;
 }
+/* .hero .featured-item:hover .icon i, */
 
 .hero .featured-item:hover h4 a,
-.hero .featured-item:hover .icon i,
 .hero .featured-item:hover p {
   color: var(--nav-color);
 }
@@ -1192,37 +1205,58 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Clients Section
+# Diplomas Section
 --------------------------------------------------------------*/
-.clients .swiper-slide img {
+.diplomas .swiper-slide img {
   opacity: 0.5;
   transition: 0.3s;
   filter: grayscale(100);
 }
 
-.clients .swiper-slide img:hover {
+.diplomas .swiper-slide img:hover {
   filter: none;
   opacity: 1;
 }
 
-.clients .swiper-wrapper {
+.diplomas .swiper-wrapper {
   height: auto;
 }
 
-.clients .swiper-pagination {
+.diplomas .swiper-pagination {
   margin-top: 20px;
   position: relative;
 }
 
-.clients .swiper-pagination .swiper-pagination-bullet {
+.diplomas .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   opacity: 1;
   background-color: color-mix(in srgb, var(--default-color), transparent 80%);
 }
 
-.clients .swiper-pagination .swiper-pagination-bullet-active {
+.diplomas .swiper-pagination .swiper-pagination-bullet-active {
   background-color: var(--accent-color);
+}
+
+.diplomas .button-container {
+  text-align: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.diplomas .btn-get-started {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  font-family: var(--heading-font);
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 32px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px;
+  animation: fadeInUp 1s both 0.4s;
 }
 
 /*--------------------------------------------------------------
@@ -1691,7 +1725,7 @@ section,
 # Pricing Section
 --------------------------------------------------------------*/
 .pricing {
-  padding: 60px 0 120px 0;
+  padding: 20px 0 100px 0;
 }
 
 .pricing .section-title {
@@ -2557,6 +2591,10 @@ section,
   padding-left: 5px;
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
+}
+
+.scrolled-offset {
+  margin-top: 70px;
 }
 
 /* Cookies */
