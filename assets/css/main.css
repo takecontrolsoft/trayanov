@@ -856,8 +856,8 @@ section,
 }
 
 .carousel-container img {
-  margin-top: -180px;
-  margin-bottom: 80px;
+  margin-top: -160px;
+  margin-bottom: 60px;
   position: sticky;
   max-width: 200px;
   max-height: 200px;
@@ -871,7 +871,7 @@ section,
   font-size: 48px;
   font-weight: 700;
   animation: fadeInDown 1s both;
-  text-shadow: -1px 2px 6px #ffffff;  
+  text-shadow: -1px 1px 13px #d6eef098;  
 }
 
 .hero .carousel-item h2 span {
