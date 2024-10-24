@@ -22,19 +22,19 @@
     --background-color: #ffffff; /* Background color for the entire website, including individual sections */
     --default-color: #01304d; /* Default color used for the majority of the text content across the entire website */
     --heading-color: #545454; /* Color for headings, subheadings and title throughout the website */
-    --accent-color: #ffbb9b; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-    --surface-color: #d1eff7; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+    --accent-color: #fd9385; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+    --surface-color: #99fee636; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
     --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
     --nav-color: #005b97; /* The default color of the main navmenu links */
-    --nav-hover-color: #e96b56; /* Applied to main navmenu links when they are hovered over or active */
+    --nav-hover-color: #fd9385; /* Applied to main navmenu links when they are hovered over or active */
     --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
     --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
     --nav-dropdown-color: #444444; /* Used for navigation links of the dropdown items in the navigation menu. */
-    --nav-dropdown-hover-color: #e96b56; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+    --nav-dropdown-hover-color: #fd9385; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -155,7 +155,7 @@ h6 {
 
 .header .topbar {
   background-color: var(--background-color);
-  height: 40px;
+  height: 30px;
   padding: 0;
   font-size: 14px;
   transition: all 0.5s;
@@ -203,7 +203,7 @@ h6 {
 }
 
 .header .branding {
-  padding: 10px 0;
+  padding: 0;
 }
 
 .header .logo {
@@ -526,7 +526,7 @@ h6 {
 }
 
 .footer .footer-top {
-  padding-top: 50px;
+  padding-top: 40px;
 }
 
 .footer .social-links a {
@@ -818,6 +818,7 @@ section,
   height: 100%;
   object-fit: cover;
   z-index: 1;
+  opacity: 50%;
 }
 
 .hero .carousel-item {
@@ -827,6 +828,7 @@ section,
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
+  box-shadow: inset 0px 0px 200px 200px rgba(30, 1, 1, 20);
 }
 
 .hero .carousel-item:before {
@@ -834,7 +836,6 @@ section,
   background: color-mix(in srgb, var(--background-color), transparent 20%);
   position: absolute;
   inset: 0;
-  z-index: 2;
 }
 
 .hero .carousel-item::before {
@@ -851,7 +852,18 @@ section,
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  z-index: 3;
+  z-index: 2;
+}
+
+.carousel-container img {
+  margin-top: -160px;
+  margin-bottom: 60px;
+  position: sticky;
+  max-width: 200px;
+  max-height: 200px;
+  border: 2px solid var(--accent-color);
+  border-radius: 100px;
+  opacity: 100%;
 }
 
 .hero .carousel-item h2 {
@@ -859,6 +871,7 @@ section,
   font-size: 48px;
   font-weight: 700;
   animation: fadeInDown 1s both;
+  text-shadow: -1px 1px 13px #d6eef098;  
 }
 
 .hero .carousel-item h2 span {
@@ -873,6 +886,9 @@ section,
 
 .hero .carousel-item p {
   animation: fadeInDown 1s both 0.2s;
+  color: var(--default-color);
+  text-shadow: 3px 3px 10px #ffffff;  
+  font-size: 30px;
 }
 
 @media (min-width: 1024px) {
@@ -899,7 +915,7 @@ section,
 }
 
 .hero .btn-get-started:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  background: color-mix(in srgb, var(--accent-color), transparent 30%);
 }
 
 .hero .carousel-control-prev,
@@ -975,7 +991,7 @@ section,
 }
 
 .hero .featured-item {
-  background-color: var(--surface-color);
+  background-color: var(--contrast-color);
   box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
   padding: 40px 30px;
   transition: all 0.3s ease-in-out;
@@ -983,12 +999,13 @@ section,
   width: 100%;
   position: relative;
   z-index: 1;
+  border-radius: 15px 15px 0 0;
 }
 
 .hero .featured-item:before {
   content: "";
   position: absolute;
-  background: var(--accent-color);
+  background: #56565628;
   inset: 100% 0 0 0;
   transition: all 0.3s;
   z-index: -1;
@@ -1026,13 +1043,13 @@ section,
 .hero .featured-item:hover h4 a,
 .hero .featured-item:hover .icon i,
 .hero .featured-item:hover p {
-  color: var(--contrast-color);
+  color: var(--nav-color);
 }
 
 .hero .featured-item:hover:before {
-  background: var(--accent-color);
+  background: #56565628;
   inset: 0;
-  border-radius: 0px;
+  border-radius: 15px 15px 0 0;
 }
 
 @keyframes fadeInUp {
@@ -1095,13 +1112,20 @@ section,
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
+.services .container h3 {
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
 .services .service-item {
   background-color: var(--surface-color);
   text-align: center;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
-  padding: 80px 20px;
+  padding: 40px 20px;
   transition: all ease-in-out 0.3s;
   height: 100%;
+  border-radius: 15px;
 }
 
 .services .service-item .icon {
@@ -1131,7 +1155,7 @@ section,
   top: -8px;
   height: 100%;
   width: 100%;
-  background: color-mix(in srgb, var(--accent-color), transparent 80%);
+  
   border-radius: 5px;
   transition: all 0.3s ease-out 0s;
   transform: translateZ(-1px);
@@ -1150,25 +1174,21 @@ section,
 }
 
 .services .service-item:hover {
-  background: var(--accent-color);
+  background: #99fee680;
   border-color: var(--accent-color);
 }
 
 .services .service-item:hover .icon {
-  background: var(--surface-color);
+  background: var(--nav-color) ;
 }
 
 .services .service-item:hover .icon i {
   color: var(--accent-color);
 }
 
-.services .service-item:hover .icon::before {
-  background: color-mix(in srgb, var(--background-color), transparent 70%);
-}
-
-.services .service-item:hover h3,
+/*.services .service-item:hover h3,*/
 .services .service-item:hover p {
-  color: var(--contrast-color);
+  color: var(--nav-color);
 }
 
 /*--------------------------------------------------------------
@@ -1699,7 +1719,7 @@ section,
   margin: 30px auto 20px auto;
   width: 70px;
   height: 70px;
-  background: var(--accent-color);
+  background: var(--nav-color);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1721,7 +1741,7 @@ section,
   height: 86px;
   width: 86px;
   border-radius: 50%;
-  background: color-mix(in srgb, var(--accent-color), transparent 80%);
+  background: color-mix(in srgb, var(--nav-color), transparent 80%);
   transition: all 0.3s ease-out 0s;
   transform: translateZ(-1px);
 }
@@ -1732,7 +1752,7 @@ section,
   height: 102px;
   width: 102px;
   border-radius: 50%;
-  background: color-mix(in srgb, var(--accent-color), transparent 90%);
+  background: color-mix(in srgb, var(--nav-color), transparent 90%);
   transition: all 0.3s ease-out 0s;
   transform: translateZ(-2px);
 }
@@ -1742,7 +1762,7 @@ section,
   color: var(--accent-color);
   font-weight: 700;
   font-family: var(--heading-font);
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   text-align: center;
 }
 
@@ -1793,7 +1813,7 @@ section,
   display: inline-block;
   padding: 8px 40px 10px 40px;
   border-radius: 50px;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+  border: 5px double color-mix(in srgb, var(--default-color), transparent 80%);
   transition: none;
   font-size: 16px;
   font-weight: 600;
@@ -2287,12 +2307,12 @@ section,
   background-color: var(--surface-color);
   padding: 20px 0 30px 0;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
 }
-
 
 .contact .info-item i {
   font-size: 20px;
-  color: var(--accent-color);
+  color: var(--nav-color);
   width: 56px;
   height: 56px;
   font-size: 24px;
@@ -2302,7 +2322,7 @@ section,
   border-radius: 4px;
   transition: all 0.3s ease-in-out;
   border-radius: 50%;
-  border: 2px dotted color-mix(in srgb, var(--accent-color), transparent 20%);
+  border: 2px dotted color-mix(in srgb, var(--nav-color), transparent 20%);
 }
 
 .contact .info-item h3 {
@@ -2576,9 +2596,8 @@ section,
 }
 
 .cookiealert button {
-
   color: #005b97;
-  background: #ffbb9b;
+  background: var(--accent-color);
   display: inline-block;
   transition: 0.3s;
 }
