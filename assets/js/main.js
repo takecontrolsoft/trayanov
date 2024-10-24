@@ -75,6 +75,7 @@
     });
   }
 
+   
   /**
    * Scroll top button
    */
@@ -99,16 +100,14 @@
   /**
    * Animation on scroll function and init
    */
-  function aosInit() {
+  window.addEventListener('load', () => {
     AOS.init({
-      duration: 600,
+      duration: 400,
       easing: 'ease-in-out',
       once: true,
       mirror: false
-    });
-  }
-  window.addEventListener('load', aosInit);
-
+    })
+  });
   /**
    * Init swiper sliders
    */
@@ -189,5 +188,64 @@
     });
 
   });
+  var cookieAlert = document.querySelector(".cookiealert");
+  var acceptCookies = document.querySelector(".acceptcookies");
+
+  if (!cookieAlert) {
+     return;
+  }
+
+  cookieAlert.offsetHeight;
+
+  if (!getCookie("acceptCookies")) {
+      cookieAlert.classList.add("show");
+  }
+
+  acceptCookies.addEventListener("click", function () {
+      setCookie("acceptCookies", true, 365);
+      cookieAlert.classList.remove("show");
+
+      window.dispatchEvent(new Event("cookieAlertAccept"))
+  });
+
+  function setCookie(cname, cvalue, exdays) {
+      var d = new Date();
+      d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+      var expires = "expires=" + d.toUTCString();
+      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+
+  function getCookie(cname) {
+      var name = cname + "=";
+      var decodedCookie = decodeURIComponent(document.cookie);
+      var ca = decodedCookie.split(';');
+      for (var i = 0; i < ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) === ' ') {
+              c = c.substring(1);
+          }
+          if (c.indexOf(name) === 0) {
+              return c.substring(name.length, c.length);
+          }
+      }
+      return "";
+  }
+
+  /**
+   * Header fixed top on scroll
+   */
+  let selectHeader = document.querySelector('#header')
+  if (selectHeader) {
+    let headerOffset = selectHeader.offsetTop
+    let nextElement = selectHeader.nextElementSibling
+    const headerFixed = () => {
+      if ((headerOffset - window.scrollY) <= 0) {
+        nextElement.classList.add('scrolled-offset')
+      } else {
+        nextElement.classList.remove('scrolled-offset')
+      }
+    }
+    window.addEventListener('load', headerFixed)
+  }
 
 })();
