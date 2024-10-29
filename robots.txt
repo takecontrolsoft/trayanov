@@ -1,0 +1,6 @@
+# robots.txt for https://dr-trayanov.com/
+
+User-agent: *
+Disallow: /clinica.bg/ 
+Disallow: /9meseca.bg/
+Disallow: /www.marica.bg/
