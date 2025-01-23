@@ -2336,7 +2336,7 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Contact Section
+#  ,  Section
 --------------------------------------------------------------*/
 .contact .info-item {
   background-color: var(--surface-color);
@@ -2371,6 +2371,10 @@ section,
   padding: 0;
   margin-bottom: 0;
   font-size: 14px;
+}
+
+.half {
+width: 50%;
 }
 
 .contact .php-email-form {
