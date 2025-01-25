@@ -2369,12 +2369,12 @@ section,
 
 .contact .info-item p {
   padding: 0;
-  margin-bottom: 0;
+  margin-bottom: 25px;
   font-size: 14px;
 }
 
-.half {
-width: 50%;
+@media (max-width: 575px) {
+  iframe {width: 90%;}
 }
 
 .contact .php-email-form {
