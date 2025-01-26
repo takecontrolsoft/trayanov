@@ -2608,7 +2608,7 @@ section,
   position: fixed;
   bottom: 0;
   right: 60px;
-  max-width: 240px;
+  max-width: 360px;
   margin: 0 !important;
   padding: 0.2rem 1.25rem;
   z-index: 999;
@@ -2621,6 +2621,7 @@ section,
   background-color: #e9fffa;
   font-size: 14px;
   border: 1px solid var(--accent-color);
+  padding: 20px;
 }
 
 .cookiealert p

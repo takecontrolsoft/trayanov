@@ -603,8 +603,16 @@
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Preloader -->
-  <!--<div id="preloader"></div>-->
+  <!-- Main JS File -->
+  <div class="alert text-center cookiealert" role="alert">
+    <h5>Политика за бисквитките</h5>
+    <p>Ние използваме бисквитки, за да гарантираме, че получавате най-доброто изживяване на нашия уебсайт.</p>
+    <h6><a href="cookie-policy.html" target="_blank">Прочетете повече</a></h6>
+    <br />
+    <button type="button" class="btn btn-sm acceptcookies">
+      OK
+    </button>
+  </div>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -616,18 +624,9 @@
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
-  <!-- Main JS File -->
-  <div class="alert text-center cookiealert show" role="alert">
-    </br><a href="cookie-policy.html" target="_blank">Политика за бисквитките</a></br></br>
-    <p>Ние използваме бисквитки, за да гарантираме, че получавате най-доброто изживяване на нашия уебсайт.</p></br>
-    <button class="btn btn-sm acceptcookies">
-      OK
-    </button>
-    </br></br>
-  </div>
-
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-34XNL9KEK3"></script>
   <script>
@@ -636,6 +635,13 @@
     gtag('js', new Date());
 
     gtag('config', 'G-34XNL9KEK3');
+  </script>
+
+  <!-- Cronitor RUM -->
+  <script async src="https://rum.cronitor.io/script.js"></script>
+  <script>
+    window.cronitor = window.cronitor || function () { (window.cronitor.q = window.cronitor.q || []).push(arguments); };
+    cronitor('config', { clientKey: 'de5bc2575a96a585335abf0fbd117c68' });
   </script>
 
 </body>
