@@ -89,7 +89,9 @@ h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
 }
-
+h5 {
+  text-align: center;
+}
 /* PHP Email Form Messages
 ------------------------------*/
 .php-email-form .error-message {
